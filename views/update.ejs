@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Message</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.75em;
+            color: #343a40;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            margin: 8px 0;
+            color: #6c757d;
+            font-weight: normal;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 15px;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #495057;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        textarea:focus {
+            border-color: #28a745;
+            outline: none;
+            box-shadow: 0 0 10px rgba(40, 167, 69, 0.2);
+        }
+
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 20px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Update Your Message</h3>
+        <h4>FROM: <%= chats.from %></h4>
+        <h4>TO: <%= chats.to %></h4>
+        <h4>ID: <%= chats.id %></h4>
+
+        <form action="/chats/<%= chats.id %>?_method=PUT" method="POST">
+            <textarea name="msg" id=""><%= chats.msg %></textarea>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+
+</body>
+</html>

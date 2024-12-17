@@ -1,0 +1,64 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #242424;
+    margin: 0;
+    padding: 20px;
+    font-family: "Outfit";
+}
+
+.chat-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-box.from {
+    background-color: #e1ffc7;
+    align-self: flex-start;
+}
+
+.chat-box.to {
+    background-color: #d1e7ff;
+    align-self: flex-end;
+}
+
+.chat-box .meta {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 5px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+button{
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(241, 226, 226);
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
